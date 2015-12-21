@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.16.1 -->
+<interface>
+  <requires lib="gtk+" version="3.10"/>
+  <object class="GtkWindow" id="mod_cd">
+    <property name="name">mod_cd</property>
+    <property name="can_focus">False</property>
+    <signal name="destroy" handler="hide_widget" swapped="no"/>
+    <child>
+      <object class="GtkGrid" id="mod_cd_grid">
+        <property name="name">mod_cd_grid</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="row_homogeneous">True</property>
+        <child>
+          <object class="GtkLabel" id="mod_cd_id_label">
+            <property name="name">mod_cd_id_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">CD ID:</property>
+            <property name="ellipsize">start</property>
+            <property name="angle">0.01</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">0</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="mod_cd_id_entry">
+            <property name="name">mod_cd_id_entry</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">0</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="mod_cd_songs_label">
+            <property name="name">mod_cd_songs_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Songs:</property>
+            <property name="ellipsize">middle</property>
+            <property name="angle">0.01</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">1</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="mod_cd_songs_entry">
+            <property name="name">mod_cd_songs_entry</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">1</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="mod_cd_authors_label">
+            <property name="name">mod_cd_authors_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Authors:</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">2</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="mod_cd_authors_entry">
+            <property name="name">mod_cd_authors_entry</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">2</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="mod_cd_borrowed_label">
+            <property name="name">mod_cd_borrowed_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="ellipsize">middle</property>
+            <property name="angle">0.01</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">3</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="mod_cd_borrowed_check">
+            <property name="label" translatable="yes">borrowed</property>
+            <property name="name">mod_cd_borrowed_check</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">3</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="mod_cd_ok_button">
+            <property name="label" translatable="yes">OK</property>
+            <property name="name">mod_cd_ok_button</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="oku_button_clicked" object="mod_cd" swapped="no"/>
+            <signal name="released" handler="hide_widget" object="mod_cd" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">4</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="mod_cd_cancel_button">
+            <property name="label" translatable="yes">Cancel</property>
+            <property name="name">mod_cd_cancel_button</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="hide_widget" object="mod_cd" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">4</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="new_cd">
+    <property name="name">new_cd</property>
+    <property name="can_focus">False</property>
+    <signal name="destroy" handler="hide_widget" swapped="no"/>
+    <child>
+      <object class="GtkGrid" id="new_cd_grid">
+        <property name="name">new_cd_grid</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="row_homogeneous">True</property>
+        <child>
+          <object class="GtkLabel" id="new_cd_id_label">
+            <property name="name">new_cd_id_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">CD ID:</property>
+            <property name="ellipsize">start</property>
+            <property name="angle">0.01</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">0</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="new_cd_id_entry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">0</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="new_cd_songs_label">
+            <property name="name">new_cd_songs_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Songs:</property>
+            <property name="ellipsize">middle</property>
+            <property name="angle">0.01</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">1</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="new_cd_songs_entry">
+            <property name="name">new_cd_songs_entry</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">1</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="new_cd_authors_label">
+            <property name="name">new_cd_authors_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Authors:</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">2</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="new_cd_authors_entry">
+            <property name="name">new_cd_authors_entry</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">2</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="new_cd_borrowed_label">
+            <property name="name">new_cd_borrowed_label</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="ellipsize">middle</property>
+            <property name="angle">0.01</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">3</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="new_cd_borrowed_check">
+            <property name="label" translatable="yes">borrowed</property>
+            <property name="name">new_cd_borrowed_check</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="xalign">0</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">3</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="new_cd_ok_button">
+            <property name="label" translatable="yes">OK</property>
+            <property name="name">new_cd_ok_button</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="ok_button_clicked" object="new_cd" swapped="no"/>
+            <signal name="released" handler="hide_widget" object="new_cd" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">4</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="new_cd_cancel_button">
+            <property name="label" translatable="yes">Cancel</property>
+            <property name="name">new_cd_cancel_button</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="hide_widget" object="new_cd" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">4</property>
+            <property name="width">1</property>
+            <property name="height">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="name">window</property>
+    <property name="can_focus">False</property>
+    <signal name="destroy" handler="gtk_quit" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="name">main_box</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkBox" id="entry_and_list">
+            <property name="name">entry_and_list</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkEntry" id="entry">
+                <property name="name">entry</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="valign">start</property>
+                <property name="placeholder_text" translatable="yes">Filter by id</property>
+                <signal name="activate" handler="filter_activated" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="scrolled_window">
+                <property name="name">scrolled_window</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="shadow_type">in</property>
+                <child>
+                  <object class="GtkTreeView" id="tree_view">
+                    <property name="name">tree_view</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="enable_grid_lines">both</property>
+                    <signal name="cursor-changed" handler="row_selected" swapped="no"/>
+                    <child internal-child="selection">
+                      <object class="GtkTreeSelection" id="treeview_selection"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="buttons_box">
+            <property name="name">buttons_box</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">15</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="create">
+                <property name="label" translatable="yes">CREATE</property>
+                <property name="name">create</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="create_button_clicked" object="new_cd" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="update">
+                <property name="label" translatable="yes">UPDATE</property>
+                <property name="name">update</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_bottom">1</property>
+                <signal name="clicked" handler="update_button_clicked" object="mod_cd" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="delte">
+                <property name="label" translatable="yes">DELETE</property>
+                <property name="name">delete</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="delete_button_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
