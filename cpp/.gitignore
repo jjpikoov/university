@@ -1,0 +1,6 @@
+*.o
+*.projectile
+*.x
+GPATH
+GRTAGS
+GTAGS
