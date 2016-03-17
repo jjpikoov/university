@@ -35,7 +35,7 @@ struct rational
       // class object. The function has no access to the fields
       // num and denum.
 
-    static int lcm(int n1, int n2, int gcd);
+    /* static int lcm(int n1, int n2, int gcd); */
 
    void normalize( );
       // Divide common factors out of num and denum.
