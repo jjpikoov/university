@@ -70,7 +70,6 @@ void stack::operator = (const stack& s)
     }
 }
 
-
 stack::~stack()
 {
     delete [] tab;
@@ -86,4 +85,30 @@ void stack::printStack()
         std::cout << tab[i] << " ";
     }
     std::cout << "}\n";
+}
+
+
+void stack::push(double d)
+{
+    ensure_capacity(current_size + 1);
+    tab[current_size++] = d;
+}
+
+void stack::pop()
+{
+    if (!empty())
+        current_size--;
+}
+
+void stack::reset(size_t s)
+{
+    if (s < current_capacity && s < current_size)
+    {
+        current_size = s;
+    }
+}
+
+double& top()
+{
+    
 }

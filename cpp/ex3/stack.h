@@ -16,7 +16,7 @@ class stack
  public:
     stack();
 
-    stack(std::initializer_list<double> d);
+    stack(std::initializer_list<double> d); 
 
     stack(const stack& s);
 
