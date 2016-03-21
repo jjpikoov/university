@@ -34,8 +34,10 @@ class stack
     size_t size() const {return current_size;}
     bool empty() const {return current_size == 0;}
 
-    void printStack();
+    friend std::ostream& operator << (std::ostream& stream, const stack& s);
 };
+
+
 
 
 #endif

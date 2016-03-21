@@ -1,5 +1,6 @@
 #include <iostream>
 #include "stack.h"
+#include <limits>
 
 
 void stack::ensure_capacity(size_t c)
@@ -26,7 +27,7 @@ stack::stack()
       current_capacity(1),
       tab(new double[1])
 {
-    std::cout << "Default constructor\n";
+
 }
 
 
@@ -35,7 +36,6 @@ stack::stack(std::initializer_list<double> d)
       current_capacity(current_size + 1),
       tab(new double[current_capacity])
 {
-    std::cout << "IL\n";
     size_t pos = 0;
     for (double x : d){
         tab[pos++] = x;
@@ -48,7 +48,7 @@ stack::stack(const stack& s)
       current_capacity(s.current_size + 1),
       tab(new double[current_capacity])
 {
-    std::cout << "Not default constructor\n";
+    std::cout << "Copy constructor\n";
     for (size_t i = 0; i < s.current_size; i++)
         tab[i] = s.tab[i];
 }
@@ -73,18 +73,19 @@ void stack::operator = (const stack& s)
 stack::~stack()
 {
     delete [] tab;
-    std::cout << "Destructor\n";
 }
 
 
-void stack::printStack()
+std::ostream& operator << (std::ostream& stream, const stack& s)
 {
-    std::cout << "{";
-    for (size_t i = 0; i < current_size; i++)
+    stream << "[ ";
+    for (size_t i = 0; i < s.current_size; i++)
     {
-        std::cout << tab[i] << " ";
+        stream << s.tab[i] << " ";
     }
-    std::cout << "}\n";
+    stream << "]\n";
+
+    return stream;
 }
 
 
@@ -98,6 +99,8 @@ void stack::pop()
 {
     if (!empty())
         current_size--;
+    else
+        std::cerr << "EMPTY STACK!\n";
 }
 
 void stack::reset(size_t s)
@@ -106,9 +109,26 @@ void stack::reset(size_t s)
     {
         current_size = s;
     }
+
 }
 
-double& top()
+double& stack::top()
 {
-    
+    if (!empty())
+    {
+        return tab[--current_size];
+    }
+    std::cerr << "EMPTY STACK!\n";
+
+    return tab[0]; // Co wtedy???
+
+}
+
+double stack::top() const
+{
+    if (!empty())
+    {
+        return tab[current_size - 1];
+    }
+    return std::numeric_limits<double>::max();
 }
